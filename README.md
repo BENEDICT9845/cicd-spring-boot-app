@@ -2,8 +2,6 @@
 
 ![Screenshot 2023-03-28 at 9 38 09 PM](https://user-images.githubusercontent.com/43399466/228301952-abc02ca2-9942-4a67-8293-f76647b6f9d8.png)
 
-![image](https://github.com/BENEDICT9845/cicd-spring-boot-app/assets/57481452/edd6832a-27f2-4360-a10c-f8d1456318a4)
-
 # Jenkins Pipeline for Java based application using Maven, SonarQube, Argo CD, Helm and Kubernetes
 
 Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Java application using SonarQube, Argo CD, Helm, and Kubernetes:
@@ -60,4 +58,22 @@ Steps:
        7.1 Trigger the Jenkins pipeline to start the CI/CD process for the Java application.
        7.2 Monitor the pipeline stages and fix any issues that arise.
 
+
+
+# Jenkins Pipeline
+![image](https://github.com/BENEDICT9845/cicd-spring-boot-app/assets/57481452/6ebb3c3f-ae19-44ea-8025-781ac3de3302)
+
+# Argo CD
+![image](https://github.com/BENEDICT9845/cicd-spring-boot-app/assets/57481452/edd6832a-27f2-4360-a10c-f8d1456318a4)
+
+# Sonarqube
+![image](https://github.com/BENEDICT9845/cicd-spring-boot-app/assets/57481452/91787666-d66f-4ced-ad20-47f48b904fb4)
+
+# Dockerhub
+![image](https://github.com/BENEDICT9845/cicd-spring-boot-app/assets/57481452/a82c8a0b-4fc5-476e-9ee3-9c0cf1675dfa)
+
+
+![image](https://github.com/BENEDICT9845/cicd-spring-boot-app/assets/57481452/cb304f04-cb88-4430-871c-942c1e5d3efb)
+
 This end-to-end Jenkins pipeline will automate the entire CI/CD process for a Java application, from code checkout to production deployment, using popular tools like SonarQube, Argo CD, Helm, and Kubernetes.
+
