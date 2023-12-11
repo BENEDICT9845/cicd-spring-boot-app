@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        git branch: 'master', url: 'https://github.com/BENEDICT9845/cicd-spring-boot-app.git'
+        //git branch: 'master', url: 'https://github.com/BENEDICT9845/cicd-spring-boot-app.git'
       }
     }
     stage('Build and Test') {
