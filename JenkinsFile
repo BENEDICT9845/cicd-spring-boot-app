@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'benedictprajwal/ultimate-cicd-pipeline:v1'
+      image 'jenkins/jnlp-slave'
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://13.126.83.169:9000"
+        SONAR_URL = "http://13.234.122.201:9000/"
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -56,10 +56,10 @@ pipeline {
                     git config user.email "benedict.prajwal@gmail.com"
                     git config user.name "Prajwal Benedict A"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" deployment.yml
-                    git add deployment.yml
+                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" manifests/deployment.yml
+                    git add manifests/deployment.yml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
+                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
                 '''
             }
         }
